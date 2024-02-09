@@ -6,7 +6,7 @@ const cars = [
     description:
       "The Modest Explorer is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
     imageUrl:
-      "https://assets.scrimba.com/advanced-react/react-router/modest-explorer.png",
+      "https://images.pexels.com/photos/6462662/pexels-photo-6462662.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     type: "simple",
   },
   {
@@ -46,7 +46,7 @@ const cars = [
     description:
       "The Cruiser is a van for those who love to travel in comfort and luxury. With its many windows, spacious interior and ample storage space, the Cruiser offers a beautiful view wherever you go.",
     imageUrl:
-      "https://assets.scrimba.com/advanced-react/react-router/the-cruiser.png",
+      "https://images.pexels.com/photos/909907/pexels-photo-909907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     type: "luxury",
   },
   {
