@@ -3,6 +3,15 @@ import "./Cars.modules.css";
 import cars from "../server";
 import { Link } from "react-router-dom";
 const Cars = () => {
+  // const getData = async () => {
+  //   const response = await fetch("/api/vans");
+  //   const data = await response.json();
+  //   console.log(data);
+  // };
+  // useEffect(() => {
+  //   getData();
+  // }, []);
+ 
   return (
     <>
       <div className="carpage">

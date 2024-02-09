@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import "./Navbar.modules.css";
-const Navbar = () => {
+import "./Header.modules.css";
+const Header = () => {
   return (
     <div className="navigationbar">
       <div className="logo">
@@ -9,6 +9,9 @@ const Navbar = () => {
       </div>
       <div className="navigation">
         <ul>
+          <li>
+            <NavLink to="/host">Host</NavLink>
+          </li>
           <li>
             <NavLink to="/about">About</NavLink>
           </li>
@@ -21,4 +24,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;

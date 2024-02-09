@@ -3,12 +3,12 @@ import "./Cardtails.modules.css";
 import cars from "../server";
 import { useParams } from "react-router-dom";
 const Cardetails = () => {
-  const params = useParams();
-  console.log(params.id);
+  const { id } = useParams();
+  console.log(id);
   return (
     <div className="cardetails">
       {cars.map((car) =>
-        car.id == params.id ? (
+        car.id == id ? (
           <div className="showCard" key={car.id}>
             <div
               className="image"
