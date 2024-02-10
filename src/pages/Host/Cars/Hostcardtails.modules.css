@@ -1,0 +1,48 @@
+.hostcarddesign {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.mainDiv {
+    width: 70%;
+    /* height: 60vh; */
+    background-color: #FFF;
+    border-radius: 10px;
+}
+
+.firstDiv {
+    width: 40rem;
+    height: 15rem;
+    /* background-color: #4e4d4d; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.cardTNP {
+    display: flex;
+    height: 7rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.finalnav {
+    width: 15rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.navactive {
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+}

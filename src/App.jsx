@@ -10,6 +10,10 @@ import Reviews from "./pages/Host/Reviews";
 import Hostlayout from "./components/Hostlayout";
 import Dashboard from "./pages/Host/Dashboard";
 import Hostcars from "./pages/Host/Cars/Hostcars";
+import Hostcardtails from "./pages/Host/Cars/Hostcardtails";
+import Nestedcardtails from "./pages/Host/Cars/Nestedcardtails";
+import Nestedcardprice from "./pages/Host/Cars/Nestedcardprice";
+import NestedcardPhoto from "./pages/Host/Cars/NestedcardPhoto";
 
 function App() {
   return (
@@ -26,6 +30,11 @@ function App() {
               <Route path="income" element={<Income />} />
               <Route path="reviews" element={<Reviews />} />
               <Route path="cars" element={<Hostcars />} />
+              <Route path="cars/:id" element={<Hostcardtails />}>
+                <Route index element={<Nestedcardtails />} />
+                <Route path="price" element={<Nestedcardprice/>} />
+                <Route path="image" element={<NestedcardPhoto/>} />
+              </Route>
             </Route>
           </Route>
         </Routes>

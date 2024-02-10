@@ -1,6 +1,7 @@
 import React from "react";
 import cars from "./server.js";
 import "./Hostcars.modules.css";
+import { Link } from "react-router-dom";
 const Hostcars = () => {
   return (
     <>
@@ -15,13 +16,14 @@ const Hostcars = () => {
                 className="hcardimage"
                 style={{ backgroundImage: `url(${car.imageUrl})` }}
               ></div>
-
-              <div className="hcardtext">
-                <div className="hcarname">{car.name}</div>
-                <div className="">
-                  ${car.price} <p>/day</p>
+              <Link to={`/host/cars/${car.id}`}>
+                <div className="hcardtext">
+                  <div className="hcarname">{car.name}</div>
+                  <div className="">
+                    ${car.price} <p>/day</p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>
