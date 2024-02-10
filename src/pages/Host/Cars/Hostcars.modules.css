@@ -40,3 +40,13 @@
 .hcarname {
     font-weight: 700;
 }
+
+.hostcards a {
+    text-decoration: none;
+    color: black;
+}
+
+.hostcards a.classActive {
+    color: rgb(78, 152, 218);
+    background-color: blue;
+}

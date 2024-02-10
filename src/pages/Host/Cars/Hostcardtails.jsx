@@ -21,7 +21,6 @@ const Hostcardtails = () => {
         {cars.map((car) =>
           car.id == id ? (
             <div key={id} className="mainDiv">
-              <div></div>
               <div className="firstDiv">
                 <img
                   src={car.imageUrl}

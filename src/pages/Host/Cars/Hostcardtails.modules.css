@@ -32,17 +32,26 @@
 }
 
 .finalnav {
-    width: 15rem;
+    width: 20rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin: 3rem;
 }
 
-.navactive {
+.finalnav a {
     text-decoration: none;
-    font-size: 2rem;
+    padding: .7rem 2rem;
+    border-radius: 5px;
+    color: black;
 }
 
-a {
-    text-decoration: none;
+/* .finalnav a:hover {
+    color: black;
+    
+} */
+
+.finalnav a.navactive {
+    background-color: blueviolet;
+    color: #FFF;
 }
