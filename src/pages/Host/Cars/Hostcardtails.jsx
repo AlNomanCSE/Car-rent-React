@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, NavLink, Outlet, useParams } from "react-router-dom";
+import { CgArrowLongLeft } from "react-icons/cg";
 import "./Hostcardtails.modules.css";
 import cars from "./server";
 
@@ -8,9 +9,14 @@ const Hostcardtails = () => {
 
   return (
     <>
-      <NavLink to=".." relative="path">
-        <span> ----Back to all cars</span>
-      </NavLink>
+      <div style={{ padding: "2rem" }}>
+        <NavLink to=".." relative="path">
+          <span>
+            <CgArrowLongLeft />
+            {`   `} Back to all cars
+          </span>
+        </NavLink>
+      </div>
       <div className="hostcarddesign">
         {cars.map((car) =>
           car.id == id ? (
