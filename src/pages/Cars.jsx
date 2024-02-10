@@ -11,7 +11,7 @@ const Cars = () => {
   // useEffect(() => {
   //   getData();
   // }, []);
- 
+
   return (
     <>
       <div className="carpage">

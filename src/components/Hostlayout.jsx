@@ -7,17 +7,43 @@ const Hostlayout = () => {
       <div className="navigation">
         <ul>
           <li>
-            <NavLink to="/host">Dashboard</NavLink>
+            <NavLink
+              to="/host"
+              end
+              className={({ isActive }) => (isActive ? "active-link" : null)}
+            >
+              Dashboard
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/host/income">Income</NavLink>
+            <NavLink
+              to="/host/income"
+              className={({ isActive }) => (isActive ? "active-link" : null)}
+            >
+              Income
+            </NavLink>
           </li>
+
           <li>
-            <NavLink to="/host/reviews">Reviews</NavLink>
+            <NavLink
+              to="/host/cars"
+              className={({ isActive }) => (isActive ? "active-link" : null)}
+            >
+              Cars
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="/host/reviews"
+              className={({ isActive }) => (isActive ? "active-link" : null)}
+            >
+              Reviews
+            </NavLink>
           </li>
         </ul>
       </div>
-      <Outlet/>
+      <Outlet />
     </>
   );
 };

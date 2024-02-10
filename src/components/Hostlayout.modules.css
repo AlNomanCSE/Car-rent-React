@@ -12,9 +12,15 @@
     text-decoration: none;
     color: rgb(49, 49, 49);
     font-weight: 500;
+    height: 3rem;
+    width: 4rem;
+    display: inline;
+    padding: .5rem 1rem;
 }
 
-.navigation .active {
-    text-decoration: underline;
-    color: black;
+.navigation .active-link {
+    text-decoration: none;
+    background-color: blueviolet;
+    border-radius: 3px;
+    color: #fff;
 }

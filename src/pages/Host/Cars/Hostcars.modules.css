@@ -1,0 +1,42 @@
+.displaysize {
+    width: 100%;
+}
+
+.hostcartag h1 {
+    padding-top: 5rem;
+    padding-left: 15rem;
+}
+
+.hostcards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hcard {
+    margin: 2rem;
+    padding: 1rem;
+    width: 40%;
+    height: 10rem;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.hcardimage {
+    width: 30%;
+    height: 90%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin-right: 3rem;
+}
+
+.hcarname {
+    font-weight: 700;
+}
