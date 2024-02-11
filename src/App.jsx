@@ -14,6 +14,7 @@ import Hostcardtails from "./pages/Host/Cars/Hostcardtails";
 import Nestedcardtails from "./pages/Host/Cars/Nestedcardtails";
 import Nestedcardprice from "./pages/Host/Cars/Nestedcardprice";
 import NestedcardPhoto from "./pages/Host/Cars/NestedcardPhoto";
+import Errorpage from "./Errorpage";
 
 function App() {
   return (
@@ -34,10 +35,11 @@ function App() {
                 {/* useParams */}
                 <Route index element={<Nestedcardtails />} />
                 {/* useOutletContext */}
-                <Route path="price" element={<Nestedcardprice/>} />
-                <Route path="image" element={<NestedcardPhoto/>} />
+                <Route path="price" element={<Nestedcardprice />} />
+                <Route path="image" element={<NestedcardPhoto />} />
               </Route>
             </Route>
+            <Route path="*" element={<Errorpage/>} />
           </Route>
         </Routes>
       </BrowserRouter>

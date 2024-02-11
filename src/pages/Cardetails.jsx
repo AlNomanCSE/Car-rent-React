@@ -2,16 +2,20 @@ import React from "react";
 import "./Cardtails.modules.css";
 import cars from "../server";
 import { CgArrowLongLeft } from "react-icons/cg";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useLocation, useParams } from "react-router-dom";
 const Cardetails = () => {
   const { id } = useParams();
+  const location = useLocation();
+  console.log(location);
+  const search = location.state?.search || "";
+  const type =  location.state?.type||"all";
   return (
     <>
       <div
         style={{ padding: "1rem 5rem", display: "flex", fontSize: "1.2rem" }}
       >
         <NavLink
-          to=".."
+          to={`..${search}`}
           relative="path"
           style={{ textDecoration: "none", padding: "2rem", color: "black" }}
         >
@@ -24,7 +28,7 @@ const Cardetails = () => {
             }}
           >
             <CgArrowLongLeft />
-            Back to all Cars
+            Back to {type} Cars
           </div>
         </NavLink>
       </div>

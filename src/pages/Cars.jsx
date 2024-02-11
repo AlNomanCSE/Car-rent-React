@@ -71,7 +71,13 @@ const Cars = () => {
                 className="image"
                 style={{ backgroundImage: `url(${car.imageUrl})` }}
               ></div>
-              <Link to={car.id}>
+              <Link
+                to={car.id}
+                state={{
+                  search: `?${searchParams.toString()}`,
+                  type: typeFilter,
+                }}
+              >
                 <div className="nameNbill">
                   <div className="name">{car.name}</div>
                   <div className="bill">
