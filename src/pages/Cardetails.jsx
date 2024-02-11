@@ -1,14 +1,19 @@
 import React from "react";
 import "./Cardtails.modules.css";
-import cars from "../server";
 import { CgArrowLongLeft } from "react-icons/cg";
-import { NavLink, useLocation, useParams } from "react-router-dom";
+import {
+  NavLink,
+  useLoaderData,
+  useLocation,
+  useParams,
+} from "react-router-dom";
 const Cardetails = () => {
   const { id } = useParams();
   const location = useLocation();
+  const cars = useLoaderData();
   console.log(location);
   const search = location.state?.search || "";
-  const type =  location.state?.type||"all";
+  const type = location.state?.type || "all";
   return (
     <>
       <div

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./Cars.modules.css";
-import cars from "../server";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useLoaderData, useSearchParams } from "react-router-dom";
+
 const Cars = () => {
   // const getData = async () => {
   //   const response = await fetch("/api/vans");
@@ -11,6 +11,8 @@ const Cars = () => {
   // useEffect(() => {
   //   getData();
   // }, []);
+
+  const cars = useLoaderData();
   const [searchParams, setSearchParams] = useSearchParams();
   const typeFilter = searchParams.get("type");
   const filterList = typeFilter

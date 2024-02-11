@@ -1,5 +1,10 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+} from "react-router-dom";
 import Cars from "./pages/Cars";
 import About from "./pages/About";
 import Home from "./pages/Home";
@@ -16,33 +21,36 @@ import Nestedcardprice from "./pages/Host/Cars/Nestedcardprice";
 import NestedcardPhoto from "./pages/Host/Cars/NestedcardPhoto";
 import Errorpage from "./Errorpage";
 
+import loader from "./server";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Home />} />
+      <Route path="about" element={<About />} />
+      <Route path="cars" element={<Cars />} loader={loader} />
+      <Route path="cars/:id" element={<Cardetails />} loader={loader} />
+      <Route path="host" element={<Hostlayout />}>
+        <Route index element={<Dashboard />} />
+        <Route path="income" element={<Income />} />
+        <Route path="reviews" element={<Reviews />} />
+        <Route path="cars" element={<Hostcars />} />
+        <Route path="cars/:id" element={<Hostcardtails />}>
+          {/* useParams */}
+          <Route index element={<Nestedcardtails />} />
+          {/* useOutletContext */}
+          <Route path="price" element={<Nestedcardprice />} />
+          <Route path="image" element={<NestedcardPhoto />} />
+        </Route>
+      </Route>
+      <Route path="*" element={<Errorpage />} />
+    </Route>
+  )
+);
 function App() {
   return (
     <div className="container">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="cars" element={<Cars />} />
-            <Route path="cars/:id" element={<Cardetails />} />
-            <Route path="host" element={<Hostlayout />}>
-              <Route index element={<Dashboard />} />
-              <Route path="income" element={<Income />} />
-              <Route path="reviews" element={<Reviews />} />
-              <Route path="cars" element={<Hostcars />} />
-              <Route path="cars/:id" element={<Hostcardtails />}>
-                {/* useParams */}
-                <Route index element={<Nestedcardtails />} />
-                {/* useOutletContext */}
-                <Route path="price" element={<Nestedcardprice />} />
-                <Route path="image" element={<NestedcardPhoto />} />
-              </Route>
-            </Route>
-            <Route path="*" element={<Errorpage/>} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <RouterProvider router={router} />
     </div>
   );
 }

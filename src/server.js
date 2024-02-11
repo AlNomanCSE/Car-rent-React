@@ -60,4 +60,6 @@ const cars = [
     type: "rugged",
   },
 ];
-export default cars;
+export default function loader() {
+  return cars;
+}
