@@ -39,18 +39,29 @@ const Cars = () => {
               Clear filters
             </button> */}
             {/* Option 2  as object common way to use*/}
-            <button onClick={() => setSearchParams({ type: "simple" })}>
+            <button
+              onClick={() => setSearchParams({ type: "simple" })}
+              className={typeFilter === "simple" ? "selected" : null}
+            >
               Simple
             </button>
-            <button onClick={() => setSearchParams({ type: "luxury" })}>
+            <button
+              onClick={() => setSearchParams({ type: "luxury" })}
+              className={typeFilter === "luxury" ? "selected" : null}
+            >
               Luxury
             </button>
-            <button onClick={() => setSearchParams({ type: "rugged" })}>
+            <button
+              onClick={() => setSearchParams({ type: "rugged" })}
+              className={typeFilter === "rugged" ? "selected" : null}
+            >
               Rugged
             </button>
-            <button className="clearbtn" onClick={() => setSearchParams({})}>
-              Clear filters
-            </button>
+            {typeFilter ? (
+              <button className="clearbtn" onClick={() => setSearchParams({})}>
+                Clear filters
+              </button>
+            ) : null}
           </div>
         </div>
         <div className="displayCars">

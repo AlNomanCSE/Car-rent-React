@@ -79,18 +79,25 @@
 
 .type button {
     border: none;
-    background-color: rgb(34, 80, 52);
+    /* background-color: rgb(34, 80, 52); */
+    /* background: transparent; */
     padding: 10px 20px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     border-radius: 3px;
     margin-right: 2rem;
     cursor: pointer;
-    color: #fff;
+    color: #1d1c1c;
     font-weight: 500;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .displayCars a {
     text-decoration: none;
     color: black;
+}
+
+.filterDiv .selected {
+    background-color: rgb(34, 80, 52);
+    color: #fff;
 }
