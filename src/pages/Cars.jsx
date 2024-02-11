@@ -71,7 +71,7 @@ const Cars = () => {
                 className="image"
                 style={{ backgroundImage: `url(${car.imageUrl})` }}
               ></div>
-              <Link to={`/cars/${car.id}`}>
+              <Link to={car.id}>
                 <div className="nameNbill">
                   <div className="name">{car.name}</div>
                   <div className="bill">

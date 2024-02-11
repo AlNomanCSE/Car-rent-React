@@ -1,7 +1,7 @@
 import React from "react";
 import cars from "./server.js";
 import "./Hostcars.modules.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Hostcars = () => {
   return (
     <>
@@ -17,13 +17,13 @@ const Hostcars = () => {
                 style={{ backgroundImage: `url(${car.imageUrl})` }}
               ></div>
               <NavLink
-                to={`/host/cars/${car.id}`}
+                to={car.id}
                 className={({ isActive }) => (isActive ? "classActive" : "")}
               >
                 <div className="hcardtext">
                   <div className="hcarname">{car.name}</div>
-                  <div className="">
-                    ${car.price} <p>/day</p>
+                  <div>
+                    ${car.price} <p style={{ opacity: ".5" }}>/day</p>
                   </div>
                 </div>
               </NavLink>

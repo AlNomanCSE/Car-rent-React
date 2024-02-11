@@ -5,22 +5,22 @@ const Nestedcardtails = () => {
   const { car } = useOutletContext();
   console.log(car);
   return (
-    <div className="details" style={{ padding: "2rem", width: "40rem" }}>
+    <div className="details" style={{ padding: " 1rem 5rem" }}>
       <span>
         <h1>Name:</h1>
-        <p>{car.name}</p>
+        <p style={{ opacity: ".5" }}>{car.name}</p>
       </span>
       <span>
         <h2>Catagory:</h2>
-        <p>{car.type}</p>
+        <p style={{ opacity: ".5" }}>{car.type}</p>
       </span>
       <span>
         <h3>Description:</h3>
-        <p>{car.description}</p>
+        <p style={{ opacity: ".5" }}>{car.description}</p>
       </span>
       <span>
         <h4>Visibility:</h4>
-        <p>Public</p>
+        <p style={{ opacity: ".5" }}>Public</p>
       </span>
     </div>
   );

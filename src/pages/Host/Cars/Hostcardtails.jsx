@@ -9,12 +9,25 @@ const Hostcardtails = () => {
 
   return (
     <>
-      <div style={{ padding: "2rem" }}>
-        <NavLink to=".." relative="path">
-          <span>
+      <div
+        style={{ padding: "1rem 5rem", display: "flex", fontSize: "1.2rem" }}
+      >
+        <NavLink
+          to=".."
+          relative="path"
+          style={{ textDecoration: "none", padding: "2rem", color: "black" }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <CgArrowLongLeft />
-            {`   `} Back to all cars
-          </span>
+            Back to all Cars
+          </div>
         </NavLink>
       </div>
       <div className="hostcarddesign">
@@ -31,9 +44,19 @@ const Hostcardtails = () => {
                   }}
                 />
                 <div className="cardTNP">
-                  <div className="">{car.type}</div>
-                  <div className="">{car.name}</div>
-                  <div className="">${car.price}/day</div>
+                  <div
+                    style={{
+                      fontSize: "2rem",
+                      fontWeight: "500",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    {car.type}
+                  </div>
+                  <div style={{ fontSize: "", fontWeight: "" }}>{car.name}</div>
+                  <div style={{ fontSize: "", fontWeight: "500" }}>
+                    ${car.price}/day
+                  </div>
                 </div>
               </div>
               <div className="finalnav">
