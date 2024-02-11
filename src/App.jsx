@@ -31,7 +31,9 @@ function App() {
               <Route path="reviews" element={<Reviews />} />
               <Route path="cars" element={<Hostcars />} />
               <Route path="cars/:id" element={<Hostcardtails />}>
+                {/* useParams */}
                 <Route index element={<Nestedcardtails />} />
+                {/* useOutletContext */}
                 <Route path="price" element={<Nestedcardprice/>} />
                 <Route path="image" element={<NestedcardPhoto/>} />
               </Route>
