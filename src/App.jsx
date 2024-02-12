@@ -22,12 +22,14 @@ import NestedcardPhoto from "./pages/Host/Cars/NestedcardPhoto";
 import Errorpage from "./Errorpage";
 
 import loader from "./server";
+import Login from "./pages/Login";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
+      <Route path="login" element={<Login/>}/>
       <Route path="cars" element={<Cars />} loader={loader} />
       <Route path="cars/:id" element={<Cardetails />} loader={loader} />
       <Route path="host" element={<Hostlayout />}>

@@ -1,4 +1,5 @@
 import React from "react";
+import { CgProfile } from "react-icons/cg";
 import { Link, NavLink } from "react-router-dom";
 import "./Header.modules.css";
 const Header = () => {
@@ -17,6 +18,11 @@ const Header = () => {
           </li>
           <li>
             <NavLink to="/cars">Cars</NavLink>
+          </li>
+          <li>
+            <NavLink to="/login" style={{ fontSize: "1.5rem" }}>
+              <CgProfile />
+            </NavLink>
           </li>
         </ul>
       </div>
