@@ -25,17 +25,17 @@ const Login = () => {
 
         <div className="inputs email">
           <MdEmail />
-          <input type="text" className="input" placeholder="Email" />
+          <input type="email" className="input" placeholder="Email" />
         </div>
         <div className="inputs password">
           <RiLockPasswordFill />
-          <input type="text" className="input" placeholder="Password" />
+          <input type="password" className="input" placeholder="Password" />
         </div>
         {action === "Sign Up" ? (
           <></>
         ) : (
           <div className="forget-Password">
-            Lost Password? <span>Click Here!</span>
+            Forgotten password? <span> Click Here!</span>
           </div>
         )}
         <div className="submit-Container">

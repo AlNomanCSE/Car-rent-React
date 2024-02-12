@@ -22,13 +22,13 @@
 
 .text {
     font-size: 3rem;
-    color: #211951;
+    color: blueviolet;
 }
 
 .underline {
     height: 4px;
     width: 35%;
-    background-color: #211951;
+    background-color: blueviolet;
     border-radius: 10px;
 }
 
@@ -71,7 +71,7 @@ input {
 
 .forget-Password span {
     font-weight: 600;
-    color: #211951;
+    color: blueviolet;
     cursor: pointer;
 }
 
@@ -86,6 +86,6 @@ input {
 }
 
 .bgColor {
-    background-color: #211951;
+    background-color: blueviolet;
     color: #fff;
 }
